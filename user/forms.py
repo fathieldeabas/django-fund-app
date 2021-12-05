@@ -6,16 +6,16 @@ from .models import Profile
 class SignupForm(UserCreationForm):
     class Meta:
         model= User
-        fields=['username','email','password','password2']
+        fields=['username','first_name','last_name','email','password1','password2']
 
 
 class Userform(forms.ModelForm):
     class Meta:
         model = User
-        fields=['username','first_name','last_name','email']
+        fields=['username','first_name','last_name']
 
 class Profileform(forms.ModelForm):
     class  Meta:
         model= Profile
-        fields=['fname','lname','mobile','image']
+        fields=['phone','image','facebook_profile','country']
 
